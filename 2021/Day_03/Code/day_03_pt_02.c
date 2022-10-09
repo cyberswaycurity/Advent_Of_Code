@@ -173,6 +173,8 @@ int main(int argc, char *argv[]) {
 
 	}
 
+	free(generator);
+
 // *********************************************************************
 //                      SCRUBBER RATING CALCULATION
 // *********************************************************************
@@ -270,6 +272,7 @@ int main(int argc, char *argv[]) {
 
 	}
 
+	free(scrubber);
 
 // *********************************************************************
 //                      SCRUBBER RATING CALCULATION
