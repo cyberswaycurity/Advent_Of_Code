@@ -155,32 +155,25 @@ int main(int argc, char *argv[]) {
 
 		drawn_number = numbers_list[i];
 
-			for(int j = 0; j < bingo_cards_index + 1; j++) {
+		for(int j = 0; j < bingo_cards_index + 1; j++) {
 
-				for(int k = 0; k < GRID_SIZE; k++) {
+			for(int k = 0; k < GRID_SIZE; k++) {
 
-					for(int l = 0; l < GRID_SIZE; l++) {
+				for(int l = 0; l < GRID_SIZE; l++) {
 
-						if(bingo_cards_rows[j][k][l] == drawn_number) {
+					if(bingo_cards_rows[j][k][l] == drawn_number) {
 
-							bingo_cards_num_tracker[j][k][l] = 'X';
-							bingo_cards_rows_win_check[j][k]++;
-							bingo_cards_cols_win_check[j][l]++;
+						bingo_cards_num_tracker[j][k][l] = 'X';
+						bingo_cards_rows_win_check[j][k]++;
+						bingo_cards_cols_win_check[j][l]++;
 
-							if((bingo_cards_rows_win_check[j][k] == 5 ) || (bingo_cards_cols_win_check[j][l] == 5)) {
+						if((bingo_cards_rows_win_check[j][k] == 5 ) || (bingo_cards_cols_win_check[j][l] == 5)) {
 
-								winner = true;
-								winning_board = j;
-								break;
-
-							}
+							winner = true;
+							winning_board = j;
+							break;
 
 						}
-					}
-
-					if(winner) {
-
-						break;
 
 					}
 				}
@@ -191,6 +184,13 @@ int main(int argc, char *argv[]) {
 
 				}
 			}
+
+			if(winner) {
+
+				break;
+
+			}
+		}
 
 		if(winner) {
 
@@ -223,6 +223,8 @@ int main(int argc, char *argv[]) {
 		}
 
 	}
+
+	printf("Winning sum: %i\n",winning_sum);
 
 	free(bingo_cards_rows);
 
