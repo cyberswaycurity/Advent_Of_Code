@@ -13,11 +13,9 @@ int main(int argc, char *argv[]) {
 	int y2;
 	char input[MAX_CHAR];
 	int line_max_x = 0;
-	int max_x = 0;
 	int line_max_y = 0;
-	int max_y = 0;
 	int line_max = 0;
-	int max_size = 1;
+	int max_size = 0;
 
 	if(argv[1] == NULL) {
 
