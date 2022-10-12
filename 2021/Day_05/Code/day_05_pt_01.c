@@ -159,6 +159,7 @@ int main(int argc, char *argv[]) {
 
 	printf("Puzzle answer: %i\n",overlap_count);
 
+	free(vents_field);
 
 	return 0;
 }
