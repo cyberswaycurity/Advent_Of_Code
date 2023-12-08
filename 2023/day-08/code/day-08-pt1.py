@@ -29,4 +29,8 @@ while starting_key != 'ZZZ':
         starting_key = nodes_map[starting_key][idx]
         step_count = step_count + 1
 
+        if starting_key == 'ZZZ':
+
+            break
+
 print(step_count)
