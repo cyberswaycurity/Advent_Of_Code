@@ -27,8 +27,6 @@ for i in nodes:
 
 z_check = [ 0 for i in range(len(starting_keys)) ]
 
-z_steps = []
-
 step_count = 0
 
 notAllZ = True
