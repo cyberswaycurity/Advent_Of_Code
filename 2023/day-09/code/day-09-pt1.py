@@ -14,7 +14,6 @@ for i in lines:
     history = [ n for n in i ]
 
     predictions = [history]
-    analysis = []
 
     notZero = True
 
@@ -23,8 +22,6 @@ for i in lines:
     while notZero:
 
         predictions_step = []
-        analysis_step = []
-        
 
         for i in range(len(predictions[beg_idx]) - 1):
 
@@ -59,14 +56,3 @@ for i in lines:
     final_analysis_sum = final_analysis_sum + prediction_next_value
 
 print(final_analysis_sum)
-
-
-
-
-
-
-            
-
-
-
-            
